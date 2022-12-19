@@ -13,6 +13,9 @@ public class BasicNavigations {
         // 2- Create instance of the Selenium Webdriver
         WebDriver driver = new ChromeDriver();
 
+        //This line will maximize the browser size
+        driver.manage().window().maximize();
+
         //3- Go to web page driver.get(url)
         driver.get("https://www.tesla.com");
 
@@ -49,6 +52,9 @@ public class BasicNavigations {
         // Get the current URL using selenium
         currentURL=driver.getCurrentUrl();
         System.out.println("currentUrl = " + currentURL);
+
+
+
 
 
 
