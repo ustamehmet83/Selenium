@@ -22,9 +22,9 @@ public class T4_getText_cssSelector {
         String actualResetPasswordButtonText=resetPasswordButton.getText();
         String expectedResetPasswordButtonText="Reset password";
         if (actualResetPasswordButtonText.equals(expectedResetPasswordButtonText)) {
-            System.out.println("Reset password text verification is PASSED!");
+            System.out.println("Reset password button text verification is PASSED!");
         } else {
-            System.out.println("Reset password text verification is FAİLED!");
+            System.out.println("Reset password button text verification is FAİLED!");
         }
         driver.close();
 
