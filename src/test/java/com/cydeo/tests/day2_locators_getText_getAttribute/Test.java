@@ -13,7 +13,11 @@ public class Test {
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
         driver.findElement(By.xpath("//*[@id=\"gbwa\"]/div/a")).click();
-        driver.findElement(By.xpath("//*[@id=\"yDmH0d\"]/c-wiz/div/div/c-wiz/div/div/ul[1]/li[4]/a/div/span")).click();
+        driver.findElements(By.cssSelector("a[href='https://mail.google.com/mail/']"));
+
+        //label[class="login-item-checkbox-label"]
+        //a[class="tX9u1b"]
+
 
     }
 }
