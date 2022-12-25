@@ -35,6 +35,7 @@ public class T5_getTextGetAttribute {
         }
 
 driver.close();
+
     }
 
 
