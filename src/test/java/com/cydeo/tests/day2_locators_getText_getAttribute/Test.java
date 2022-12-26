@@ -12,11 +12,12 @@ public class Test {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
-        driver.findElement(By.xpath("//*[@id=\"gbwa\"]/div/a")).click();
-        driver.findElements(By.cssSelector("a[href='https://mail.google.com/mail/']"));
+        driver.findElement(By.xpath("//a[@class='gb_d']")).click();
+        driver.findElements(By.xpath("//a[@class='tX9u1b']"));
 
         //label[class="login-item-checkbox-label"]
         //a[class="tX9u1b"]
+        //*[@id="gbwa"]/div/a/svg
 
 
     }
