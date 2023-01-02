@@ -2,6 +2,7 @@ package com.cydeo.tests.day05_testNG_Intro_dropdowns;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -19,15 +20,27 @@ public class T1_StaleElementRefEx {
         //2. Go to https://practice.cydeo.com/add_remove_elements/
         driver.get("https://practice.cydeo.com/add_remove_elements/ ");
         //3. Click to “Add Element” button
-        WebElement addElementButton= driver.findElement(By.xpath("//button[@onclick='addElement()']"));
+        WebElement addElementButton= driver.findElement(By.xpath("//button[.='Add Element']"));
         addElementButton.click();
         //4. Verify “Delete” button is displayed after clicking.
         WebElement deleteButton=driver.findElement(By.xpath("//button[@class='added-manually']"));
-        deleteButton.isDisplayed();
+        System.out.println("deleteButton.isDisplayed() = " + deleteButton.isDisplayed());
         //5. Click to “Delete” button.
         deleteButton.click();
         //6. Verify “Delete” button is NOT displayed after clicking.
-        deleteButton.isDisplayed();
+
+        try {
+            System.out.println("deleteButton.isDisplayed() = " + deleteButton.isDisplayed());
+        }catch (StaleElementReferenceException e){
+            System.out.println("-->StaleElementReferenceException exception is thrown");
+            System.out.println("-->This means the web element is completely deleted from the page");
+            System.out.println("deleteButton.isDisplayed() = false");
+        }
+
+
+
+
+        driver.close();
         //USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
 
 
