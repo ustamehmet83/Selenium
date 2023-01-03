@@ -7,10 +7,8 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class T2_RadioButton {
+public class T3_RadioBtn_Cont {
     public static void main(String[] args) {
-        //XPATH PRACTICES
-        //DO NOT USE ANY DEVELOPER TOOLS TO GET ANY LOCATORS.
         //TC #2: Radiobutton handling
         //1. Open Chrome browser
         WebDriver driver= WebDriverFactory.getWebdriver("Chrome");
@@ -20,20 +18,5 @@ public class T2_RadioButton {
         driver.get("https://practice.cydeo.com/radio_buttons");
         //3. Click to “Hockey” radio button
         WebElement hockeyBtn=driver.findElement(By.xpath("//input[@id='hockey']"));
-        hockeyBtn.click();
-        //4. Verify “Hockey” radio button is selected after clicking.
-        if (hockeyBtn.isSelected()){
-            System.out.println("Button is selected.Verification is PASSED");
-        }else{
-            System.out.println("Button is not selected.Verification is FAİLED");
-        }
-        driver.close();
-
-
-
-
-
-
-        //USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
     }
 }
