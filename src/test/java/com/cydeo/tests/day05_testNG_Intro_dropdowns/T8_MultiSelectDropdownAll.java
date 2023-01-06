@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class T8_MultiSelectDropdown {
+public class T8_MultiSelectDropdownAll {
     WebDriver driver;
 
     @BeforeMethod

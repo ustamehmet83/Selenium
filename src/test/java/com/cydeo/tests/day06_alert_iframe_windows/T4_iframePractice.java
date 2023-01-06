@@ -18,7 +18,7 @@ public class T4_iframePractice {
     public void setupMethod(){
         //TTC #4: Iframe practice
         //1. Create a new class called: T4_Iframes
-        //2. Create new test and make set ups
+        //2. Create new test and make setups
         driver= WebDriverFactory.getWebdriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
