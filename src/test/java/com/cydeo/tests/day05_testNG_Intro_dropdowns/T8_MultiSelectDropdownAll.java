@@ -17,8 +17,8 @@ public class T8_MultiSelectDropdownAll {
 
     @BeforeMethod
     public void setupMethod() {
-//TC #7: Selecting value from non-select dropdown
-//1. Open Chrome browser
+        //TC #7: Selecting value from non-select dropdown
+        //1. Open Chrome browser
         driver = WebDriverFactory.getWebdriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -47,9 +47,5 @@ public class T8_MultiSelectDropdownAll {
             }
             //5. Deselect all values.
         }
-
-
     }
-
-
 }
