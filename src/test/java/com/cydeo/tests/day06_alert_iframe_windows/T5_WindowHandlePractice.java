@@ -50,6 +50,7 @@ public class T5_WindowHandlePractice {
       
         //6. Switch to new Window.
         Set<String>allWindowHandles=driver.getWindowHandles();
+
         for (String each: allWindowHandles){
             driver.switchTo().window(each);
             System.out.println("Current title while switching windows: "+driver.getTitle());

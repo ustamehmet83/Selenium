@@ -34,7 +34,7 @@ public class T5_SelectState {
     @Test
     public void Test()  {
         //2. Go to http://practice.cybertekschool.com/dropdown
-        driver.get("http://practice.cybertekschool.com/dropdown" );
+        driver.get("https://practice.cybertekschool.com/dropdown" );
         //3. Select Illinois
         Select stateDropdown=new Select(driver.findElement(By.xpath("//select[@id='state']")));
         stateDropdown.selectByValue("IL");

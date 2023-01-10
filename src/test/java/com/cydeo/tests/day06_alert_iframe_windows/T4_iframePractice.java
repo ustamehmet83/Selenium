@@ -38,7 +38,8 @@ public class T4_iframePractice {
         Assert.assertTrue(yourContentGoesHereText.isDisplayed());
 
         //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor”
-        driver.switchTo().parentFrame();
+        driver.switchTo().parentFrame();//go to parent    3 ---> 2
+        //driver.switchTo().defaultContent();//go to direct default html page   3 ---> 1
         WebElement headerText=driver.findElement(By.xpath("//h3[.='An iFrame containing the TinyMCE WYSIWYG Editor']"));
         String actualHeaderText=headerText.getText();
         String expectedHeaderText="An iFrame containing the TinyMCE WYSIWYG Editor";
