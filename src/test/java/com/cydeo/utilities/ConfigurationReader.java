@@ -29,5 +29,16 @@ public class ConfigurationReader {
 
   }
 
+  private static String getProperty(String keyword){
+      return properties.getProperty(keyword);
+  }
+
+
+
+
+
+
+
+
 
 }
