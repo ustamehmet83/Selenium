@@ -40,9 +40,10 @@ public class SelfStudy {
         signBtn.click();
 
 
-//          WebElement alert = driver.findElement(By.xpath("//p[.='Email Address already exist!']"));
-//          if (alert!=null){
-//            if (alert.getText().contains("already exist")) {
+//          WebElement alreadyExistText = driver.findElement(By.xpath("//p[.='Email Address already exist!']"));
+
+//          if (alreadyExistText!=null){
+//            if (alreadyExistText.getText().contains("already exist")) {
 //              WebElement loginEmail = driver.findElement(By.xpath("//input[@data-qa='login-email']"));
 //              loginEmail.sendKeys("ustame83@hotmail.com");
 //              WebElement loginPassword = driver.findElement(By.xpath("//input[@data-qa='login-password']"));
