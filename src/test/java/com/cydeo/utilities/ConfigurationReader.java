@@ -29,7 +29,7 @@ public class ConfigurationReader {
 
   }
 
-  private static String getProperty(String keyword){
+  public static String getProperty(String keyword){
       return properties.getProperty(keyword);
   }
 
