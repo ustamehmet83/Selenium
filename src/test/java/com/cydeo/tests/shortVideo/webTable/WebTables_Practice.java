@@ -1,0 +1,43 @@
+package com.cydeo.tests.shortVideo.webTable;
+
+import com.cydeo.base.TestBase;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import java.util.List;
+
+public class WebTables_Practice extends TestBase {
+
+
+    @Test
+    public void webTables() {
+        driver.get("https://practice.cydeo.com/tables");
+        // print out Jason from row and cell number
+
+        WebElement jasonRowCellNumber = driver.findElement(By.xpath("//table[@id='table1']//tr[3]/td[2]"));
+        System.out.println("jasonRowCellNumber = " + jasonRowCellNumber.getText());
+
+        WebElement firstName = driver.findElement(By.xpath("(//span[.='First Name'])[1]"));
+        firstName.click();
+
+        jasonRowCellNumber = driver.findElement(By.xpath("//table[@id='table1']//tr[3]/td[2]"));
+        System.out.println("jasonRowCellNumber.getText() = " + jasonRowCellNumber.getText());
+
+        // print out Jason from text
+
+        WebElement jasonFromText = driver.findElement(By.xpath("//table[@id='table1']//td[.='Jason']"));
+        System.out.println("jasonFromText.getText() = " + jasonFromText.getText());
+
+        //print out all cells in row3
+
+        List<WebElement> allCellsInRow3 = driver.findElements(By.xpath("//table[@id='table1']//tr/td[3]"));
+
+        for (WebElement each : allCellsInRow3) {
+            System.out.println("each.getText() = " + each.getText());
+
+        }
+
+
+    }
+}
