@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class T5_getText_cssSelector {
+public class T5_getText_cssSelector_xpath {
     public static void main(String[] args) {
 //        TC #5: NextBaseCRM, locators, getText(), getAttribute() practice
 //        1- Open a Chrome browser
@@ -17,8 +17,8 @@ public class T5_getText_cssSelector {
         WebElement login=driver.findElement(By.cssSelector("input[name='USER_LOGIN']"));
         login.sendKeys("incorrect");
 
-//        4- Click to `Reset password` button
-        driver.findElement(By.xpath("//button[@value='Reset password']")).click();
+//        4- Click to `Reset password` button       //button[contains(@value,'password')]
+        driver.findElement(By.xpath("//button[contains(@value,'Reset password')]")).click();
 
 //        5- Verify “error” label is as expected
 //        expected: Login or E-mail not found
@@ -31,5 +31,6 @@ public class T5_getText_cssSelector {
             System.out.println("Error label text verification is FAİLED!");
         }
         driver.close();
+
     }
 }

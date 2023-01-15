@@ -31,6 +31,10 @@ public class T3_getAttribute_cssSelector {
         }
         driver.close();
 
+        // using index number in css locator
+        //css locator:nth-of-type(index number) --> index number is starting from 1
+        //select>option:nth-of-type(4)
+
 
 
 
