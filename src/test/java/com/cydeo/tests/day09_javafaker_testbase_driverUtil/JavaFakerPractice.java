@@ -25,5 +25,7 @@ public class JavaFakerPractice {
 
         System.out.println("faker.bothify(\"##?#-##?#-#?#?-##??\") = " + faker.bothify("##?#-##?#-#?#?-##??"));
 
+        System.out.println("faker.finance().creditCard() = " + faker.finance().creditCard());
+
     }
 }
