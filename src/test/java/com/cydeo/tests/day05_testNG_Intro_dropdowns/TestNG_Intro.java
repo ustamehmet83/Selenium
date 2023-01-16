@@ -1,10 +1,7 @@
 package com.cydeo.tests.day05_testNG_Intro_dropdowns;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 public class TestNG_Intro {
     @BeforeClass
@@ -28,7 +25,7 @@ public class TestNG_Intro {
 
     }
 
-    @org.testng.annotations.Test(priority = 1)
+    @Test(priority = 1)
     public void test1() {
         System.out.println("Test 1 is running....");
         //ASSERT EQUALS: compare 2  of the same things
@@ -39,7 +36,7 @@ public class TestNG_Intro {
     }
 
 
-    @org.testng.annotations.Test(priority = 2)
+    @Test(priority = 2)
     public void test2() {
         System.out.println("Test 2 is running....");
         String actual="apple";
