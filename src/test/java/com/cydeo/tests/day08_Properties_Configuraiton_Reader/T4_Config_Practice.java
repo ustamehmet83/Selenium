@@ -1,37 +1,34 @@
 package com.cydeo.tests.day08_Properties_Configuraiton_Reader;
 
-import com.cydeo.utilities.ConfigurationReader;
-import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
 public class T4_Config_Practice {
-    WebDriver driver;
-    @BeforeMethod
-    public void setup(){
-        //We are getting the browserType dynamıcally from our configuration.properties file.
-        String browserType= ConfigurationReader.getProperty("browser");
-        driver= WebDriverFactory.getWebdriver(browserType);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://www.google.com");
-    }
+//    WebDriver driver;
+//    @BeforeMethod
+//    public void setup(){
+//        //We are getting the browserType dynamıcally from our configuration.properties file.
+//        String browserType= ConfigurationReader.getProperty("browser");
+//        driver= WebDriverFactory.getWebdriver(browserType);
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//
+//    }
 
 
     @Test
     public void google_search_test(){
+
+        Driver.getDriver().get("https://www.google.com");
         //3- Write “apple” in search box
-        WebElement googleSearchBox= driver.findElement(By.xpath("//input[@name='q']"));
+        WebElement googleSearchBox= Driver.getDriver().findElement(By.xpath("//input[@name='q']"));
         googleSearchBox.sendKeys("apple"+ Keys.ENTER);
         //4- Verify title:
-        String actualTitle=driver.getTitle();
+        String actualTitle=Driver.getDriver().getTitle();
         //Expected: apple - Google Search
         String expectedTitle="apple - Google'da Ara";
         Assert.assertEquals(actualTitle,expectedTitle);
