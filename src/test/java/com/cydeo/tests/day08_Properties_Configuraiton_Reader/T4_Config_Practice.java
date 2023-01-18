@@ -34,4 +34,5 @@ public class T4_Config_Practice {
         Assert.assertEquals(actualTitle,expectedTitle);
 
     }
+
 }

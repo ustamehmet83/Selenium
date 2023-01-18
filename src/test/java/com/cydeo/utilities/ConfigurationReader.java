@@ -10,8 +10,6 @@ public class ConfigurationReader {
     private static Properties properties= new Properties();
 
   static {
-
-
       try {
           //2- We need to open file in java memory: FileInputStream
           FileInputStream file=new FileInputStream("configuration.properties");
@@ -25,8 +23,6 @@ public class ConfigurationReader {
           System.out.println("Something happened in the ConfigurationReader class.");
           e.printStackTrace();
       }
-
-
   }
 
   public static String getProperty(String keyword){

@@ -56,5 +56,14 @@ public class Driver {
         return driver;
     }
 
+    //driver.quit()---->no such session
+    //driver.close() ---->
+
+    //try to create a method named closeDriver
+
+    public static void closeDriver(){
+        driver.close();
+    }
+
 
 }
