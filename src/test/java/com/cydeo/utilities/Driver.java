@@ -17,7 +17,7 @@ public class Driver {
     }
 
     /*
-    We make web driver private, because we want to close access
+    We make web driver variable private, because we want to close access
     from outside of the class. We make it static because we will
     use it in a static method.
      */
