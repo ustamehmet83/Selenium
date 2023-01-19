@@ -22,7 +22,7 @@ public class T2_Upload_Practice {
         WebElement uploadBtn = Driver.getDriver().findElement(By.xpath("//input[@id='file-submit']"));
         uploadBtn.click();
 //        4. Assert:-File uploaded text is displayed on the page
-        WebElement fileUploadedHeader = Driver.getDriver().findElement(By.id("uploaded-files"));
+        WebElement fileUploadedHeader = Driver.getDriver().findElement(By.xpath("//h3[.='File Uploaded!']"));
         fileUploadedHeader.isDisplayed();
     }
 
