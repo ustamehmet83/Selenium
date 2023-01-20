@@ -62,8 +62,8 @@ public class Driver {
     //try to create a method named closeDriver
 
     public static void closeDriver(){
-        if (!(driver==null)){
-            driver.close();
+        if (driver!=null){
+            driver.quit();
         }
 
     }
