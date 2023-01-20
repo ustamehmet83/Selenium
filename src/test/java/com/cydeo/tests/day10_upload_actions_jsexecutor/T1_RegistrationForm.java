@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
 
-public class RegistrationFormTask {
+public class T1_RegistrationForm {
     @Test
     public void registration_form_test(){
 
