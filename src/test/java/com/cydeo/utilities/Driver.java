@@ -42,13 +42,13 @@ public class Driver {
             switch (browserType) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver= new ChromeDriver();
+                    driver = new ChromeDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver= new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             }
@@ -56,16 +56,14 @@ public class Driver {
         return driver;
     }
 
-    //driver.quit()---->no such session
-    //driver.close() ---->
 
-    //try to create a method named closeDriver
+    //this method will make sure our driver value is always null after using quit() method
 
-    public static void closeDriver(){
-        if (driver!=null){
-            driver.quit();
+    public static void closeDriver() {
+        if (driver != null) {
+            driver.quit();//this line will terminate the existing session. value will not even be null
+            driver=null;
         }
-
     }
 
 
