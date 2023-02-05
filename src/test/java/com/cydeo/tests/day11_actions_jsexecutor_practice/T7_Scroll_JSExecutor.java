@@ -27,6 +27,7 @@ public class T7_Scroll_JSExecutor {
         //
         //Note: You need to locate the links as web elements and pass them as
         //arguments into executeScript() method
+
         Driver.closeDriver();
     }
 

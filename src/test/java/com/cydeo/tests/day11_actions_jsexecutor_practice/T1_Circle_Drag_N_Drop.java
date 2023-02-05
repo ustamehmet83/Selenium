@@ -21,7 +21,8 @@ public class T1_Circle_Drag_N_Drop {
         Actions actions= new Actions(Driver.getDriver());
         WebElement smallCircle=Driver.getDriver().findElement(By.id("draggable"));
         WebElement bigCircle=Driver.getDriver().findElement(By.id("droptarget"));
-        actions.dragAndDrop(smallCircle,bigCircle).perform();
+        //actions.dragAndDrop(smallCircle,bigCircle).perform();
+        actions.clickAndHold(smallCircle).pause(2000).moveToElement(bigCircle).pause(2000).release().perform();
         //3. Assert:
         WebElement youDidGreatText=Driver.getDriver().findElement(By.xpath("//div[.='You did great!']"));
         //-Text in big circle changed to: “You did great!”
