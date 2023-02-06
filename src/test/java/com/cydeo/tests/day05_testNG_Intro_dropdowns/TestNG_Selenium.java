@@ -1,6 +1,6 @@
 package com.cydeo.tests.day05_testNG_Intro_dropdowns;
 
-import com.cydeo.base.TestBase;
+import com.cydeo.tests.base.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

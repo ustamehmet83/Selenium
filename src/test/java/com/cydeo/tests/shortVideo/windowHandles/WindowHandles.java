@@ -1,6 +1,6 @@
 package com.cydeo.tests.shortVideo.windowHandles;
 
-import com.cydeo.base.TestBase;
+import com.cydeo.tests.base.TestBase;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
