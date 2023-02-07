@@ -2,7 +2,6 @@ package com.cydeo.tests.day12_pageObjectModelExplicitWait_Synchronization;
 
 import com.cydeo.pages.LibraryLoginPages;
 import com.cydeo.utilities.Driver;
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -43,14 +42,30 @@ public class POMPractices {
         //4- Verify expected error is displayed:
         Assert.assertTrue(libraryLoginPages.enterValidEmailErrorMessage.isDisplayed());
         //Expected: Please enter a valid email address.
-        libraryLoginPages.inputUsername.clear();
-
-        libraryLoginPages.inputUsername.sendKeys("ustamehmet83@hotmail.com"+Keys.ENTER);
-        Assert.assertTrue(libraryLoginPages.wrongEmailOrPasswordErrorMessage.isDisplayed());
         Driver.closeDriver();
         //
         //NOTE: FOLLOW POM DESIGN PATTERN
     }
+
+    @Test
+    public void library_negative_login_test(){
+        //TC #3: Library negative login
+        //1- Open a Chrome browser
+        //2- Go to: https://library1.cydeo.com
+        libraryLoginPages=new LibraryLoginPages();
+        Driver.getDriver().get("https://library1.cydeo.com");
+        //3- Enter incorrect username or incorrect password
+        libraryLoginPages.inputUsername.sendKeys("wrong@username.com");
+        libraryLoginPages.inputPassword.sendKeys("somethingwrong");
+        libraryLoginPages.signInButton.click();
+        //4- Verify title expected error is displayed:
+        Assert.assertTrue(libraryLoginPages.wrongEmailOrPasswordErrorMessage.isDisplayed());
+        Driver.closeDriver();
+        //Expected: Sorry, Wrong Email or Password
+        //
+        //NOTE: FOLLOW POM DESIGN PATTERN
+    }
+
 
 
 
