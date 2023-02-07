@@ -38,7 +38,8 @@ public class POMPractices {
         Driver.getDriver().get("https://library1.cydeo.com");
         //3- Enter invalid email format
         libraryLoginPages=new LibraryLoginPages();
-        libraryLoginPages.inputUsername.sendKeys("somethingwrong"+ Keys.ENTER);
+        libraryLoginPages.inputUsername.sendKeys("somethingwrong");
+        libraryLoginPages.signInButton.click();
         //4- Verify expected error is displayed:
         Assert.assertTrue(libraryLoginPages.enterValidEmailErrorMessage.isDisplayed());
         //Expected: Please enter a valid email address.
