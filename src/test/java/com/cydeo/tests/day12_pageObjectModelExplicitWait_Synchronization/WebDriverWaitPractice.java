@@ -32,7 +32,6 @@ public class WebDriverWaitPractice {
         Assert.assertTrue(dynamicTitle.spongeBobImage.isDisplayed());
         //Note: Follow POM
 
-
     }
 
 
