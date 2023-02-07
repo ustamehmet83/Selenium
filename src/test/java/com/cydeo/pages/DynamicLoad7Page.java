@@ -19,4 +19,5 @@ public class DynamicLoad7Page {
     public WebElement spongeBobImage;
 
 
+
 }

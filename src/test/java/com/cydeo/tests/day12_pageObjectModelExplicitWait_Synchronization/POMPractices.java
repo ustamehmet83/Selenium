@@ -15,7 +15,7 @@ public class POMPractices {
         libraryLoginPages=new LibraryLoginPages();
     }
     @AfterMethod
-    public void close(){
+    public void tearDownMethod(){
         Driver.closeDriver();
     }
 
