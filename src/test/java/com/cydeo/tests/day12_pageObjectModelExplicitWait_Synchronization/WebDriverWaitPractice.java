@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class WebDriverWaitPractice {
-    DynamicLoad7Page dynamicTitle;
+    DynamicLoad7Page dynamicLoad7Page;
     WebDriverWait wait;
 
     @BeforeMethod
@@ -17,7 +17,7 @@ public class WebDriverWaitPractice {
         Driver.getDriver().get("https://practice.cydeo.com/dynamic_loading/7");
         //creating the wait object to be able to create certain condition to wait
         wait=new WebDriverWait(Driver.getDriver(),10);
-        dynamicTitle=new DynamicLoad7Page();
+        dynamicLoad7Page=new DynamicLoad7Page();
     }
     @Test
     public void dynamically_Loaded_Page_Elements(){
@@ -27,9 +27,9 @@ public class WebDriverWaitPractice {
         wait.until(ExpectedConditions.titleIs("Dynamic title"));
         //3. Assert:
         //Message “Done” is displayed.
-        Assert.assertTrue(dynamicTitle.doneMessage.isDisplayed());
+        Assert.assertTrue(dynamicLoad7Page.doneMessage.isDisplayed());
         //4. Assert: Image is displayed.
-        Assert.assertTrue(dynamicTitle.spongeBobImage.isDisplayed());
+        Assert.assertTrue(dynamicLoad7Page.spongeBobImage.isDisplayed());
         //Note: Follow POM
 
 
