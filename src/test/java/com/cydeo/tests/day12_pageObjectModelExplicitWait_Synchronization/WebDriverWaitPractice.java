@@ -20,11 +20,12 @@ public class WebDriverWaitPractice {
         //creating the wait object to be able to create certain condition to wait
         wait = new WebDriverWait(Driver.getDriver(), 10);
         dynamicLoad7Page = new DynamicLoad7Page();
+        dynamicLoad1Page = new DynamicLoad1Page();
     }
 
     @AfterMethod
     public void tearDownMethod() {
-        //Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 
@@ -51,17 +52,17 @@ public class WebDriverWaitPractice {
         //. Click to start
         dynamicLoad1Page.startButton.click();
         //3. Wait until loading bar disappears
-        wait.until(ExpectedConditions.visibilityOf(dynamicLoad1Page.username));
+        wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.loadingBar));
         //4. Assert username inputbox is displayed
         Assert.assertTrue(dynamicLoad1Page.username.isDisplayed());
         //5. Enter username: tomsmith
         dynamicLoad1Page.username.sendKeys("tomsmith");
         //6. Enter password: incorrectpassword
-        dynamicLoad1Page.password.sendKeys("incorrectpassword");
+        dynamicLoad1Page.password.sendKeys("somethingwrong");
         //7. Click to Submit button
         dynamicLoad1Page.submitButton.click();
         //8. Assert “Your password is invalid!” text is displayed.
-        Assert.assertTrue(dynamicLoad1Page.yourPasswordIsInvalidText.isDisplayed());
+        Assert.assertTrue(dynamicLoad1Page.errorMessage.isDisplayed());
         //Note: Follow POM Design Pattern
     }
 
