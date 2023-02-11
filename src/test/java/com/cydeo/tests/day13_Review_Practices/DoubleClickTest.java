@@ -1,5 +1,6 @@
 package com.cydeo.tests.day13_Review_Practices;
 
+import com.cydeo.pages.DoubleClickTestPage;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -24,8 +25,8 @@ public class DoubleClickTest {
         actions.doubleClick(doubleClickTestPage.doubleClickText).perform();
         //4. Assert:
         //Text’s “style” attribute value contains “red”.
-        String styleText=doubleClickTestPage.red.getAttribute("style");
-        Assert.assertTrue(styleText.contains("red"));
+        String actualStyleAttributeValue=doubleClickTestPage.doubleClickText.getAttribute("style");
+        Assert.assertTrue(actualStyleAttributeValue.contains("red"));
         //
         //NOTE: FOLLOW POM
 

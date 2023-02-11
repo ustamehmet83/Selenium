@@ -1,4 +1,4 @@
-package com.cydeo.tests.day13_Review_Practices;
+package com.cydeo.pages;
 
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -17,8 +17,7 @@ public class DoubleClickTestPage {
     @FindBy (xpath="//p[@id='demo']")
     public WebElement doubleClickText;
 
-    @FindBy (xpath="//p[@style='color: red;']")
-    public WebElement red;
+
 
 
 
