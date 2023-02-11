@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ExplicitWaitPracticePage {
+public class DynamicControlPage {
 
-    public ExplicitWaitPracticePage() {
+    public DynamicControlPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -25,11 +25,16 @@ public class ExplicitWaitPracticePage {
     public WebElement checkbox;
 
 
+    @FindBy (css="button[onclick='swapInput()']")
+    public WebElement enablebox;
+    @FindBy(css="#loading")
+    public WebElement enableLoadingBar;
 
-    public static void main(String[] args) {
+    @FindBy(xpath="//form[@id='input-example']/input")
+    public WebElement inputBox;
 
-    }
-
+    @FindBy(xpath="//p[@id='message']")
+    public WebElement enableMessage;
 
 
 
