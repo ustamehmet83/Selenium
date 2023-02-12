@@ -11,7 +11,7 @@ public class T4_Actions_Practice {
     @Test
     public void scrollTest(){
         //TC #4: Scroll practice
-        //1- Open a chrome browser
+        //1- Open a Chrome browser
         //2- Go to: https://practice.cydeo.com/
         Driver.getDriver().get("https://practice.cydeo.com/ ");
         //3- Scroll down to “Powered by CYDEO”

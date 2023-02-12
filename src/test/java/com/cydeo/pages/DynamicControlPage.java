@@ -26,7 +26,7 @@ public class DynamicControlPage {
 
 
     @FindBy (css="button[onclick='swapInput()']")
-    public WebElement enablebox;
+    public WebElement enableButton;
     @FindBy(css="#loading")
     public WebElement enableLoadingBar;
 
