@@ -38,7 +38,7 @@ public class POMPractices {
 
 
     @Test
-    public void invalid_email_format_error_message_test() throws InterruptedException {
+    public void invalid_email_format_error_message_test()  {
         //TC #2: Invalid email format error message test
         //1- Open a Chrome browser
         //2- Go to: https://library1.cydeo.com

@@ -13,9 +13,15 @@ public class DoubleClickTestPage {
     }
 
     @FindBy (xpath="//iframe[@id='iframeResult']")
-    public WebElement iframe;
+    public  WebElement iframe;
     @FindBy (xpath="//p[@id='demo']")
     public WebElement doubleClickText;
+
+    @FindBy(id = "google_ads_top_frame")
+    public WebElement googleAdsTopFrame;
+
+    @FindBy(id = "google_ads_top_frame")
+    public WebElement googleAdsTopFrame2;
 
 
 
